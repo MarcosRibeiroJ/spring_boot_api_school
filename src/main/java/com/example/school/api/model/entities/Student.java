@@ -23,7 +23,6 @@ public class Student {
 	}
 
 	public Student(String name, String email) {
-		super();
 		this.name = name;
 		this.email = email;
 	}
