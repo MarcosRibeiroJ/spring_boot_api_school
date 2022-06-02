@@ -1,8 +1,13 @@
 package com.example.school.api.model.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 public class StudentDto {
 	
+	@NotBlank
 	private String name;
+	@Email
 	private String email;
 	
 	public StudentDto() {
