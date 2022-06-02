@@ -18,5 +18,11 @@ public class StudentService {
 		student.setEmail(studentDto.getEmail());
 		studentRepository.save(student);
 	}
+	
+	public void updateStudent(Student student) {
+		if(!studentRepository.findById(student.getId()).isEmpty()) {
+			studentRepository.save(student);
+		}
+	}
 
 }
