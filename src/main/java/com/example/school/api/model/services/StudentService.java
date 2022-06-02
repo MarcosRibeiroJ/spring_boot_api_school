@@ -24,5 +24,11 @@ public class StudentService {
 			studentRepository.save(student);
 		}
 	}
+	
+	public void deleteStudent(Student student) {
+		if(!studentRepository.findById(student.getId()).isEmpty()) {
+			studentRepository.delete(student);
+		}
+	}
 
 }

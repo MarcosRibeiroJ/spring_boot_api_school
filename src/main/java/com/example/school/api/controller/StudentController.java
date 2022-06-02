@@ -3,6 +3,7 @@ package com.example.school.api.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -38,6 +39,11 @@ public class StudentController {
 	@PutMapping()
 	public void updateStudent(@Valid @RequestBody Student student) {
 		studentService.updateStudent(student);
+	}
+	
+	@DeleteMapping()
+	public void deleteStudent(@Valid @RequestBody Student student) {
+		studentService.deleteStudent(student);
 	}
 
 }
